@@ -1,0 +1,4 @@
+{
+    "login": "POST /auth/login",
+    "check": "GET /auth/check"
+}

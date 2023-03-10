@@ -1,0 +1,5 @@
+{
+    "getMyAnswer": "GET /votes/{id}/answers",
+    "answerVote": "POST /votes/{id}/answers",
+    "answeredVote": "GET /votes/answered"
+}

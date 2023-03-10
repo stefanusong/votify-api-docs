@@ -1,0 +1,7 @@
+{
+    "create": "POST /categories",
+    "getAll": "GET /categories",
+    "getById": "GET /categories/{id}",
+    "update": "PUT /categories/{id}",
+    "delete": "DELETE /categories/{id}"
+}

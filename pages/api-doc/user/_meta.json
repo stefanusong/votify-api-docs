@@ -1,0 +1,4 @@
+{
+  "register": "POST /users",
+  "getByUsername": "GET /users/{username}"
+}

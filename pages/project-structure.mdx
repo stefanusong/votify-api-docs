@@ -1,0 +1,56 @@
+## Project Structure
+
+import { FileTree } from 'nextra-theme-docs'
+
+<FileTree>
+  <FileTree.Folder name="votify-api" defaultOpen>
+    <FileTree.Folder name="config">
+        <FileTree.File name="credential.config.go" />
+        <FileTree.File name="db.config.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="dto" defaultOpen>
+        <FileTree.Folder name="request">
+            <FileTree.File name="vote.request.go" />
+        </FileTree.Folder>
+        <FileTree.Folder name="response">
+            <FileTree.File name="vote.response.go" />
+        </FileTree.Folder>
+    </FileTree.Folder>
+
+    <FileTree.Folder name="handlers">
+        <FileTree.File name="vote.handler.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="helpers">
+        <FileTree.File name="encryption.helper.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="middleware">
+        <FileTree.File name="encryption.middleware.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="models">
+        <FileTree.File name="vote.model.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="repositories">
+        <FileTree.File name="vote.repo.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="routes">
+        <FileTree.File name="vote.route.go" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="services">
+        <FileTree.File name="vote.service.go" />
+    </FileTree.Folder>
+
+    <FileTree.File name=".env" />
+    <FileTree.File name=".gitignore" />
+    <FileTree.File name="docker-compose.yaml" />
+    <FileTree.File name="init.sql" />
+    <FileTree.File name="main.go" />
+    <FileTree.File name="Makefile" />
+  </FileTree.Folder>
+</FileTree>

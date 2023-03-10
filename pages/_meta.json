@@ -1,15 +1,11 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "project-structure": "Project Structure",
+  "api-doc": "API Documentation",
   "contact": {
-    "title": "Contact ↗",
+    "title": "Author ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://linkedin.com/in/stefanusong",
     "newWindow": true
   }
 }

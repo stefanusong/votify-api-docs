@@ -1,0 +1,10 @@
+{
+    "create": "POST /votes",
+    "getOwned": "GET /votes/mine",
+    "getById": "GET /votes/{id}",
+    "getPublic": "GET /votes/public",
+    "getQuestions": "GET /votes/{id}/questions",
+    "getResult": "GET /votes/{id}/result",
+    "update": "PUT /votes/{id}",
+    "delete": "DELETE /votes/{id}"
+}

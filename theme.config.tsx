@@ -1,18 +1,31 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Votify API</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/stefanusong/votify-api',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/stefanusong/votify-api',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Votify API Docs',
   },
+  feedback: {
+    content: "Send me a feedback →"
+  },
+  editLink: {
+    text: null
+  },
+  gitTimestamp: null,
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Votify'
+      }
+    }
+  }
 }
 
 export default config

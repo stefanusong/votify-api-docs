@@ -1,11 +1,55 @@
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
 
-## What is Nextra?
+Thank you for visiting Votify! Votify is an API boilerplate written in the Go Programming Language that allows you to easily build your own voting app.
+The Votify API allows you to make your own vote, participate in an ongoing vote, and view the voting results.
+This API also includes a basic authentication and authorization mechanism that makes use of JWT tokens.
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+## Quick Start
 
-## Documentation
+### Prerequisites
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+These are the tools that you will need to run the API locally:
+
+- Go Programming Language
+- Docker
+- WSL (Windows Subsytem for Linux) For Windows User
+
+### Project Setup
+
+**1. Clone the API source code**
+
+import GithubBtn from "../components/GithubBtn";
+
+<GithubBtn />
+
+Note: (For windows users, clone the project in WSL environment)
+
+**2. Create .env file**
+- Go inside the project directory
+- Create new .env file
+- Copy the default values from the .env.example file
+- You can modify the values or just leave as it is
+
+import { Callout, FileTree } from 'nextra-theme-docs'
+
+<Callout>
+  The values inside the .env file will also be automatically used for the `docker-compose.yaml` file.
+  
+</Callout>
+
+**3. Run the API**
+
+- Open your terminal and go inside the project directory
+- Run `docker compose up{:zsh}` or `make run{:zsh}` if you have Makefile configured in your machine
+- The previous command will automatically creates 3 running container:
+  - API server (on localhost:8080)
+  - Postgres database server (on localhost:5432)
+  - PgAdmin dashboard (on localhost:5050)
+
+**4. Finished**
+Now, you can start using or modifying the API.
+
+Quick links:\
+[API Documentation](/api-doc)\
+[Project Structure](/project-structure)\
+[Connecting to PgAdmin]()

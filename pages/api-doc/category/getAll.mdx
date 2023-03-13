@@ -1,0 +1,46 @@
+## Get All Categories
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="GET" color="green" /> `/api/categories`
+
+Retrieves all created categories.
+
+### Sample request
+Endpoint
+```
+http://localhost:8080/api/categories
+```
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Success",
+    "data": {
+        "categories": [
+            {
+                "ID": "f0b62e52-384e-4370-9ae9-e097f40f435b",
+                "CreatedAt": "2023-03-13T07:50:25.914093Z",
+                "UpdatedAt": "2023-03-13T07:50:25.914093Z",
+                "DeletedAt": null,
+                "Name": "Food",
+                "Votes": null
+            },
+            {
+                "ID": "8334af3b-d0c3-4caa-b87f-821e546ac7ce",
+                "CreatedAt": "2023-03-13T08:32:01.251827Z",
+                "UpdatedAt": "2023-03-13T08:32:01.251827Z",
+                "DeletedAt": null,
+                "Name": "Travel",
+                "Votes": null
+            }
+        ]
+    },
+    "error": null
+}
+```

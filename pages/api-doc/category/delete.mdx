@@ -1,0 +1,28 @@
+## Delete Category by ID
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="DELETE" color="red" /> `/api/categories/{id}`
+
+Delete a category by its ID.
+
+### Sample request
+Endpoint:
+```
+http://localhost:8080/api/categories/b22a2a7b-c9ce-4245-adfd-c72476e0d7c6
+```
+
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Success",
+    "data": null,
+    "error": null
+}
+```

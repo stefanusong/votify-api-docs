@@ -1,7 +1,7 @@
 {
-    "create": "POST /categories",
-    "getAll": "GET /categories",
-    "getById": "GET /categories/{id}",
-    "update": "PUT /categories/{id}",
-    "delete": "DELETE /categories/{id}"
+    "create": "Create Category",
+    "getAll": "Get All Categories",
+    "getById": "Get Category by ID",
+    "update": "Update Category by ID",
+    "delete": "Delete Category by ID"
 }

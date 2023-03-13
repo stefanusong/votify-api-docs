@@ -22,7 +22,7 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter()
     if (asPath !== '/') {
       return {
-        titleTemplate: '%s – Votify'
+        titleTemplate: 'Votify'
       }
     }
   }

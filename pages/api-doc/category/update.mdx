@@ -1,0 +1,39 @@
+## Update Category by ID
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="PUT" color="orange" /> `/api/categories/{id}`
+
+Update a category values by its ID.
+
+
+### Sample request
+Endpoint:
+```
+http://localhost:8080/api/categories/b22a2a7b-c9ce-4245-adfd-c72476e0d7c6
+```
+
+Body:
+```json copy
+{
+    "name": "Food"
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| name     | string | The name of the category to be updated |
+
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Success",
+    "data": "8334af3b-d0c3-4caa-b87f-821e546ac7ce",
+    "error": null
+}
+```

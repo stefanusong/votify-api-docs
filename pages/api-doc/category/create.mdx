@@ -1,0 +1,30 @@
+## Create Category
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="POST" color="blue" /> `/api/categories`
+
+Creates a new category that can be used to create a vote.
+
+
+### Sample request
+```json copy
+{
+    "name": "Food"
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| name     | string | The name of the category. |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Category created",
+    "data": {
+        "category_id": "f0b62e52-384e-4370-9ae9-e097f40f435b"
+    },
+    "error": null
+}
+```

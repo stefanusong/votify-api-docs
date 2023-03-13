@@ -12,6 +12,4 @@ function GithubBtn({ url = "https://github.com/stefanusong/votify-api" }) {
     );
 }
 
-export default function MyApp() {
-    return <GithubBtn />;
-}
+export default GithubBtn

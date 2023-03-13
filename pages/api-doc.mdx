@@ -1,1 +1,65 @@
-API Documentation
+### API Documentation
+
+Based on simple REST principles, the Votify API endpoints return and receives JSON data about 
+votes, categories, users, and vote answers that you can try 
+
+![Simple API FLow](/simpleflow.png)
+
+#### Endpoint
+Every route in this API begins with /api.\
+For example, localhost:8080`/api/votes{:zsh}`
+
+#### Requests
+The Votify API sticks to RESTful principles. Standard HTTPS requests in UTF-8 format to an API endpoint are used to retrieve data resources. 
+Web API employs the proper HTTP verbs for each action, whenever possible:
+
+| METHOD   | ACTION |
+| :------  | :----- |
+| GET      | Retrieves resources |
+| POST     | Creates resources |
+| PUT      | Changes and/or replaces resources or collections |
+| DELETE   | Deletes resources |
+
+
+#### Responses
+All responses in this API is a JSON object that conforms to the following standard base response:
+```json
+{
+    "success": true,
+    "message": "Vote has been created",
+    "data": null,
+    "error": null
+}
+```
+`success` is a boolean type that indicates whether the request was successful or unsuccessful\
+`message` is a string type that contains a general message for the response\
+`data` is any type that contains the data that will be returned\
+`error` is any type that contains the detailed error message\
+
+#### Status Codes
+API uses the following response status codes, as defined in the RFC 2616 and RFC 6585:
+| Status Code |	Description |
+| :---------  | :---------- |
+| 200 	      |  OK - The request has succeeded. The client can read the result of the request in the body and the headers of the response. |
+| 201 	      |  Created - The request has been fulfilled and resulted in a new resource being created. |
+| 202 	      |  Accepted - The request has been accepted for processing, but the processing has not been completed. |
+| 204 	      |  No Content - The request has succeeded but returns no message body. |
+| 304 	      |  Not Modified. See Conditional requests. |
+| 400 	      |  Bad Request - The request could not be understood by the server due to malformed syntax. The message body will contain more information; see Response Schema. |
+| 401 	      |  Unauthorized - The request requires user authentication or, if the request included authorization credentials, authorization has been refused for those credentials. |
+| 403 	      |  Forbidden - The server understood the request, but is refusing to fulfill it. |
+| 404 	      |  Not Found - The requested resource could not be found. This error can be due to a temporary or permanent condition. |
+| 429 	      |  Too Many Requests - Rate limiting has been applied. |
+| 500 	      |  Internal Server Error. You should never receive this error because our clever coders catch them all … but if you are unlucky enough to get one, please report it to us through a comment at the bottom of this page. |
+| 502 	      |  Bad Gateway - The server was acting as a gateway or proxy and received an invalid response from the upstream server. |
+| 503 	      |  Service Unavailable - The server is currently unable to handle the request due to a temporary condition which will be alleviated after some delay. You can choose to resend the request again. |
+
+#### Authentication
+Votify API uses JWT token authentication for protecting the routes.\
+You can get the token from this [login](/api-doc/auth/login) endpoint.
+
+To access protected resources, you can supply the JWT token using the authorization header.\
+For example:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |

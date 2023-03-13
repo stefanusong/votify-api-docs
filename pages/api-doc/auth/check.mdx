@@ -1,0 +1,36 @@
+## Auth Check
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="GET" color="green" /> `/api/auth/check`
+
+Retrieves user data based on the username.
+
+### Sample request
+
+```
+http://localhost:8080/api/auth/check
+```
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+
+Example of valid token response:
+<Badge txt="Status: 200 OK" color="green" />
+```json copy
+{}
+```
+
+Example of invalid token response:
+<Badge txt="Status: 401 Unauthorized" color="red" />
+```json copy
+{
+    "success": false,
+    "message": "Not Authorized",
+    "data": null,
+    "error": "signature is invalid"
+}
+```

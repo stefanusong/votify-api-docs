@@ -1,0 +1,30 @@
+## Get User by Username
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="GET" color="green" /> `/api/users/{username}`
+
+Retrieves user data based on the username.
+
+### Sample request
+
+```
+http://localhost:8080/api/users/stefanusong
+```
+
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| username | string | The username of the user. Passed via the url parameter. |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "User Profile",
+    "data": {
+        "name": "Stefanus Ong",
+        "username": "stefanusong"
+    },
+    "error": null
+}
+```

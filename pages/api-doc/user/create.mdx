@@ -1,0 +1,33 @@
+## Create User
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="POST" color="blue" /> `/api/users`
+
+Creates a new votify user to create or participate
+in any vote.
+
+
+### Sample request
+```json copy
+{
+    "name": "Stefanus Ong",
+    "username": "stefanusong",
+    "password": "password"
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| name     | string | The name of the user (min. 3 characters) |
+| username | string | The username of the user. Must be unique. (min. 3 characters) |
+| password | string | The password of the user. (min. 5 characters) |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "User registered",
+    "data": null,
+    "error": null
+}
+```

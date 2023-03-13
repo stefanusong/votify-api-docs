@@ -1,0 +1,39 @@
+## Login (Get Token)
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="POST" color="blue" /> `/api/auth/login`
+
+Creates a new votify user to create or participate
+in any vote.
+
+
+### Sample request
+```json copy
+{
+    "username": "stefanusong",
+    "password": "password"
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| username | string | The username of the user. |
+| password | string | The password of the user. |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "User logged in",
+    "data": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImYxOWE0YWMzLTY4YjAtNGYyNC05NTIzLWRlMTgxYjdkMjUyNyIsIm5hbWUiOiJKb2huIERvZSIsInVzZXJuYW1lIjoiam9obmRvZSIsImV4cCI6MTY3ODc3Nzc2NH0.aeYIOFI8yg0qt-PAwDCsBnDbI1Bv7kMWXZTDG3o7TiE"
+    },
+    "error": null
+}
+```
+
+import { Callout } from 'nextra-theme-docs'
+
+<Callout>
+    the value of `data.token` from the response will be used to access other resources that require an authentication header
+</Callout>

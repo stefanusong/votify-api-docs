@@ -1,0 +1,42 @@
+## Create Vote
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="POST" color="blue" /> `/api/votes/{id}/answers`
+
+Creates a vote answer for specific user.\
+The user is determined from the authorization header token.
+
+
+### Sample request
+Body:
+```json copy
+{
+    "Answers": [
+        {
+            "QuestionID": "7156e95a-4e44-4a99-b7f8-409305fd6ea4",
+            "OptionID": "e6c8b046-7f3c-4b3a-91ad-155c5762fdd9"
+        }
+    ]
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| Answers | array | List of question and option object which represent the answer of each question |
+| QuestionID | string | The question id of the vote |
+| OptionID | string | The option id of the quetion (the chosen answer) |
+
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Vote answered",
+    "data": null,
+    "error": null
+}
+```

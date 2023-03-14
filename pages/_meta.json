@@ -3,6 +3,7 @@
   "project-structure": "Project Structure",
   "entities": "Entities",
   "api-doc": "API Documentation",
+  "ws-doc": "WebSocket Documentation (coming soon)",
   "contact": {
     "title": "Author ↗",
     "type": "page",

@@ -1,5 +1,5 @@
 {
-    "getMyAnswer": "GET /votes/{id}/answers",
-    "answerVote": "POST /votes/{id}/answers",
-    "answeredVote": "GET /votes/answered"
+    "getMyAnswer": "Get My Vote Answer",
+    "answerVote": "Create Vote Answer",
+    "answeredVote": "Get Answered Votes (coming soon)"
 }

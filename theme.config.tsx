@@ -25,7 +25,8 @@ const config: DocsThemeConfig = {
         titleTemplate: 'Votify'
       }
     }
-  }
+  },
+  primaryHue: 211
 }
 
 export default config

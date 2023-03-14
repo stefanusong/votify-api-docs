@@ -1,0 +1,52 @@
+## Get Public Votes
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="GET" color="green" /> `/api/votes/public`
+
+Retrieves all public votes (Votes that have `is_open` attribute set to `true`).
+
+### Sample request
+Endpoint
+```
+http://localhost:8080/api/votes/public
+```
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Success",
+    "data": {
+        "votes": [
+            {
+                "ID": "a8332a0b-8eeb-42e9-9158-390709ff738b",
+                "CreatedAt": "2023-03-14T03:37:29.165169Z",
+                "UpdatedAt": "2023-03-14T03:37:29.165169Z",
+                "UserID": "f19a4ac3-68b0-4f24-9523-de181b7d2527",
+                "CategoryID": "113acddb-cf85-4029-8dc2-640b0cc68842",
+                "Slug": "travel-destination",
+                "Title": "Travel Destination",
+                "IsOpen": true,
+                "IsPublic": true
+            },
+            {
+                "ID": "6487b202-bcde-4911-8545-75808a557b89",
+                "CreatedAt": "2023-03-14T03:57:51.462199Z",
+                "UpdatedAt": "2023-03-14T03:57:51.462199Z",
+                "UserID": "f19a4ac3-68b0-4f24-9523-de181b7d2527",
+                "CategoryID": "113acddb-cf85-4029-8dc2-640b0cc68842",
+                "Slug": "food-recommendation",
+                "Title": "Food Recommendation",
+                "IsOpen": false,
+                "IsPublic": true
+            }
+        ]
+    },
+    "error": null
+}
+```

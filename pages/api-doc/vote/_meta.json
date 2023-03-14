@@ -1,10 +1,10 @@
 {
-    "create": "POST /votes",
-    "getOwned": "GET /votes/mine",
-    "getById": "GET /votes/{id}",
-    "getPublic": "GET /votes/public",
-    "getQuestions": "GET /votes/{id}/questions",
-    "getResult": "GET /votes/{id}/result",
-    "update": "PUT /votes/{id}",
-    "delete": "DELETE /votes/{id}"
+    "create": "Create Vote",
+    "getOwned": "Get Owned Votes",
+    "getById": "Get Vote By ID",
+    "getPublic": "Get Public Votes",
+    "getQuestions": "Get Vote Questions",
+    "getResult": "Get Vote Results (coming soon)",
+    "update": "Update Vote by ID (coming soon)",
+    "delete": "Delete Vote by ID (coming soon)"
 }

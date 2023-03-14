@@ -8,6 +8,7 @@ Creates a new category that can be used to create a vote.
 
 
 ### Sample request
+Body:
 ```json copy
 {
     "name": "Food"
@@ -16,6 +17,11 @@ Creates a new category that can be used to create a vote.
 | KEY | TYPE | DESCRIPTION |
 | :------  | :----- | :----- |
 | name     | string | The name of the category. |
+
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
 
 ### Sample response
 ```json copy

@@ -1,0 +1,68 @@
+## Create Vote
+
+import Badge from "../../../components/Badge";
+
+<Badge txt="POST" color="blue" /> `/api/votes`
+
+Creates a new vote.
+
+
+### Sample request
+Body:
+```json copy
+{
+    "category_id": "113acddb-cf85-4029-8dc2-640b0cc68842",
+    "slug": "travel-destination",
+    "title": "Travel Destination",
+    "is_open": true,
+    "is_public": true,
+    "questions": [
+        {
+            "question": "Please Recommend a Travel Destination",
+            "options": [
+                {
+                    "option": "Bali",
+                    "desc": null
+                },
+                {
+                    "option": "Hawaii",
+                    "desc": null
+                },
+                {
+                    "option": "Labuan Bajo",
+                    "desc": null
+                }
+            ]
+        }
+    ]
+}
+```
+| KEY | TYPE | DESCRIPTION |
+| :------  | :----- | :----- |
+| category_id | string | The GUID of the category of the vote (A Foreign Key) |
+| slug | string | The slug of the vote, must be following a [slug format](https://www.semrush.com/blog/what-is-a-url-slug/?kw=&cmp=AA_SRCH_DSA_Blog_EN&label=dsa_pagefeed&Network=g&Device=c&utm_content=622459220337&kwid=dsa-1753200729493&cmpid=18361936995&agpid=141795418055&BU=Core&extid=60162920787&adpos=&gclid=Cj0KCQjwk7ugBhDIARIsAGuvgPaDp15MacmDoaOZurD0nK_7ZVuvh2pLUJp4lYHDYlQDfhtw8VjFlFYaAju4EALw_wcB), can be used as a readable identifier of the vote (eg. for vote url) |
+| title | string | The vote title, to describe what the vote is about |
+| is_open | boolean | To determine whether the vote is open / closed |
+| is_public | boolean | To determine whether the vote is open for public or not|
+| questions | array | List of question objects of the vote |
+| question | string | The question, part of the question object |
+| options | array | List of option objects of the question |
+| option | string | The option name, part of the option object |
+| desc | string | The description of the option, part of the option object |
+
+Header:
+| KEY | VALUE |
+| :- | :-|
+| Authentication | Bearer eyJhbGciOiJIXVCJ9.eyJpZCI6ImzLWRlMjoi... |
+
+### Sample response
+```json copy
+{
+    "success": true,
+    "message": "Vote created",
+    "data": {
+        "vote_id": "a8332a0b-8eeb-42e9-9158-390709ff738b"
+    },
+    "error": null
+}
+```

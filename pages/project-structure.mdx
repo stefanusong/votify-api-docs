@@ -49,8 +49,59 @@ import { FileTree } from 'nextra-theme-docs'
     <FileTree.File name=".env" />
     <FileTree.File name=".gitignore" />
     <FileTree.File name="docker-compose.yaml" />
+    <FileTree.File name="Dockerfile" />
     <FileTree.File name="init.sql" />
     <FileTree.File name="main.go" />
     <FileTree.File name="Makefile" />
   </FileTree.Folder>
 </FileTree>
+
+#### Config
+Everything in this directory has to do with configuration, including database configuration, for instance.
+
+#### DTO
+This directory is divided into two subdirectories:
+- Request: Comprises request DTOs. (Objects used as request body) 
+- Response: Comprises response DTOs. (Objects used as response body)
+
+#### Handlers
+The API endpoints are all contained in this directory. (The starting point of each endpoint).
+
+#### Helpers
+All of the project's helper files are located in this folder, including encryption helper, for instance.
+
+#### Middleware
+All of the middleware used by the API is contained in this directory, including Auth Middleware.
+
+#### Models
+The database models/entities are all located in this directory.
+
+#### Repositories 
+All of the repositories for accessing data into the database are contained in this directory.
+
+#### Routes
+This directory contains all the routes of the API, to define the route for each endpoint.
+
+#### Services
+All of the services that store the business logics are listed in this directory.
+
+#### .env
+Holds the application secrets.
+
+#### .gitignore
+Specify the folders/files to be excluded from git.
+
+#### docker-compose.yaml
+Contains the Docker commands for automating the creation of containers.
+
+#### Dockerfile
+Holds the docker commands for creating a custom image for the API.
+
+#### init.sql
+Holds the query to initialize database creation if not exists.
+
+#### main.go
+The starting point of the whole program.
+
+#### Makefile
+Holds the scripts to run complex commands in a simple way.

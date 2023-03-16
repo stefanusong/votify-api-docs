@@ -26,7 +26,10 @@ const config: DocsThemeConfig = {
       }
     }
   },
-  primaryHue: 211
+  primaryHue: 211,
+  sidebar: {
+    defaultMenuCollapseLevel: 1
+  }
 }
 
 export default config
